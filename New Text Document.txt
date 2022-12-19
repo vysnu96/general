@@ -1,0 +1,6 @@
+port 443
+nodeport 30443
+targetport 8080
+
+port:nodeport(443:30443) -- 443 is the kind of container port. but in our case container port is 8080, but given as 443. deploying the service gives the mapping as 443:30443. and the app is still accessible.
+
