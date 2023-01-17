@@ -9,9 +9,9 @@ spec:
   accessModes:
   - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
+  storageClassName: local-storage # we are using our local file system
   local:
-    path: /home/vagrant/storage
+    path: /home/vagrant/storage # path in our hard disk where the persistent volume get created
   nodeAffinity:
     required:
       nodeSelectorTerms:
