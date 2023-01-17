@@ -1,13 +1,13 @@
-# db-persistent-volume-claim.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: vehicle-quotes-postgres-data-persisent-volume-claim
+  name: jhooq-pvc
 spec:
-  volumeName: vehicle-quotes-postgres-data-persisent-volume
-  storageClassName: manual
+  volumeName: jhooq-demo-pv #the name should be the meta-data name of the persistent volume
+  storageClassName: local-storage
+  volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 5Gi
+      storage: 1Gi
