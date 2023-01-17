@@ -13,8 +13,8 @@ spec:
         name: www
     volumeMounts:
       - name: www-persistent-storage
-        mountPath: /home/vagrant/storage
+        mountPath: /home/vagrant/storage # should be the same as we mentioned in the persistent volume yaml file
   volumes:
     - name: www-persistent-storage
       persistentVolumeClaim:
-        claimName: jhooq-pvc
+        claimName: jhooq-pvc # this is the metadata name of the persistent volume claim. should match with that.
